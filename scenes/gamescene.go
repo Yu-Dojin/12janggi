@@ -3,6 +3,7 @@ package scenes
 import (
 	"log"
 
+	"github.com/Yu-Dojin/12janggi/global"
 	"github.com/hajimehoshi/ebiten"
 	"github.com/hajimehoshi/ebiten/ebitenutil"
 	"github.com/hajimehoshi/ebiten/inpututil"
@@ -32,7 +33,7 @@ func (g *GameScene) Update(screen *ebiten.Image) error {
 	// Input handling
 	if inpututil.IsMouseButtonJustReleased(ebiten.MouseButtonLeft) {
 		x, y := ebiten.CursorPosition()
-		i, j := x/GridWidth, y/GridHeight
+		i, j := x/global.GridWidth, y/global.GridHeight
 
 		if selected {
 			if i == selectedX && j == selectedY {
