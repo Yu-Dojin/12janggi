@@ -1,5 +1,7 @@
 package scenes
 
+import "github.com/hajimehoshi/ebiten"
+
 type GameScene struct {
 }
 
