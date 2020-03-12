@@ -4,6 +4,7 @@ import "github.com/hajimehoshi/ebiten"
 
 // Scene interface
 type Scene interface {
+	Startup()
 	Update(*ebiten.Image) error
 }
 
@@ -26,4 +27,5 @@ func Update(screen *ebiten.Image) error {
 
 func SetScene(scene Scene) {
 	manager.currentScene = scene
+	scene.Startup()
 }

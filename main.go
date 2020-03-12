@@ -1,11 +1,10 @@
 package main
 
 import (
-	"12janggi/scenes"
 	"log"
 
-	"github.com/Yu-Dojin/myrepo/scenemanager"
-
+	"github.com/Yu-Dojin/12janggi/scenemanager"
+	"github.com/Yu-Dojin/12janggi/scenes"
 	"github.com/hajimehoshi/ebiten"
 	"github.com/hajimehoshi/ebiten/ebitenutil"
 	"github.com/hajimehoshi/ebiten/inpututil"
