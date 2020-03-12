@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/Yu-Dojin/12janggi/global"
+	"github.com/Yu-Dojin/12janggi/scenemanager"
 	"github.com/hajimehoshi/ebiten"
 	"github.com/hajimehoshi/ebiten/ebitenutil"
 	"github.com/hajimehoshi/ebiten/inpututil"
@@ -240,6 +241,6 @@ func (g *GameScene) isMovable(prevX, prevY, tarX, tarY int) bool {
 func (g *GameScene) OnDie(gimulType GimulType) {
 	if gimulType == GimulTypeGreenWang ||
 		gimulType == GimulTypeRedWang {
-		g.gameover = true
+		scenemanager.SetScene(&GameoverScene{})
 	}
 }
